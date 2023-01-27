@@ -17,6 +17,22 @@ public class Demo {
 		
 		ArrayProcessing ap = new ArrayProcessing();
 		
+		// polymorphism
+		Shape shape = new Circle(4.7);
+		System.out.println(shape.computeArea());
+		
+		shape = new Rectangle(3, 8);
+		System.out.println(shape.computeArea());
+		
+		
+		int cutoff = 10;
+		Object obj;
+		if (cutoff <= 50)
+			obj = new String("Hello");
+		else
+			obj = new Circle(4.7);
+		
+		System.out.print(obj.toString());
 		
 	}
 
