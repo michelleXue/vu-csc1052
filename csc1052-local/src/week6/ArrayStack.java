@@ -24,9 +24,19 @@ public class ArrayStack<T> implements StackInterface<T> {
 	}
 
 	@Override
-	public T pop() {
+	public T pop() throws StackUnderflowException{
 		// TODO Auto-generated method stub
-		return null;
+		// check if the stack is empty		
+		if (isEmpty()) {
+			throw new StackUnderflowException();
+		}
+		
+		T element = stack[top];
+		
+		stack[top] = null;
+		top--;
+		
+		return element;
 	}
 
 	@Override
