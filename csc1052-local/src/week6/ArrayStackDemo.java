@@ -28,6 +28,7 @@ public class ArrayStackDemo {
 
         System.out.println(myStack);
 
+        
         System.out.println("Top element: " + myStack.peek() + "\n");
 
         myStack.push("Ricky Jr.");
